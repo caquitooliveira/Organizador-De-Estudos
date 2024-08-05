@@ -1,0 +1,116 @@
+/* Cores principais */
+:root {
+    --primary-color: #4B0082; /* Indigo */
+    --secondary-color: #00BFFF; /* DeepSkyBlue */
+    --background-start: #1E90FF; /* DodgerBlue */
+    --background-end: #8A2BE2; /* BlueViolet */
+    --text-color: #FFFFFF; /* White text */
+    --input-bg: #282c34; /* Dark background for inputs */
+    --item-bg: #2c3e50; /* Darker background for items */
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, var(--background-start), var(--background-end));
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 400px; /* Largura típica de aplicativos móveis */
+    background: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px var(--primary-color);
+}
+
+/* Estilo do formulário */
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Estilo da lista de matérias */
+#schedule {
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--item-bg);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    max-height: 60vh;
+    text-align: left; /* Left-align text inside items */
+}
+
+#schedule div {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+
+#schedule div strong {
+    color: var(--text-color);
+}
+
+#schedule div input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para o texto riscado */
+.strikethrough {
+    text-decoration: line-through;
+    color: #D3D3D3; /* Light gray for strikethrough text */
+}
